@@ -2,6 +2,4 @@
 # Desarrollo de Software
 ## Ejercicio N° 5
 
-| **Legajo** | `39514` |
-| **Apellido(s)** | `KÜHN` |
-| **Nombre(s)** | `LUIS MATÍAS` |
+39514 - **Kühn Luis Matias** 
