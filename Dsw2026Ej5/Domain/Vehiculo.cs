@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Dsw2026Ej5.Domain;
+﻿namespace Dsw2026Ej5.Domain;
 
 public abstract class Vehiculo
 {
@@ -69,6 +65,6 @@ public abstract class Vehiculo
 
     public override string ToString()
     {
-        return $"{_marca} {_modelo}";
+        return $"{GetMarca()} {GetModelo()}";
     }
 }
