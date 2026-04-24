@@ -6,69 +6,69 @@ namespace Dsw2026Ej5.Domain;
 
 public abstract class Vehiculo
 {
-    private string patente;
-    private string marca;
-    private string modelo;
-    private int anio;
-    private double capacidadCarga;
-    private Sucursal sucursal;
-    private VehiculoTipo tipo;
+    private string _patente;
+    private string _marca;
+    private string _modelo;
+    private int _anio;
+    private double _capacidadCarga;
+    private Sucursal _sucursal;
+    private VehiculoTipo _tipo;
 
     protected Vehiculo(VehiculoTipo tipo, string patente, string marca, string modelo, int anio, double capacidadCarga, Sucursal sucursal)
     {
-        this.patente = patente;
-        this.marca = marca;
-        this.modelo = modelo;
-        this.anio = anio;
-        this.capacidadCarga = capacidadCarga;
-        this.sucursal = sucursal;
-        this.tipo = tipo;
+        _patente = patente;
+        _marca = marca;
+        _modelo = modelo;
+        _anio = anio;
+        _capacidadCarga = capacidadCarga;
+        _sucursal = sucursal;
+        _tipo = tipo;
     }
 
     public string GetPatente()
     {
-        return patente;
+        return _patente;
     }
 
     public string GetMarca()
     {
-        return marca;
+        return _marca;
     }
 
     public string GetModelo()
     {
-        return modelo;
+        return _modelo;
     }
 
     public int GetAnio()
     {
-        return anio;
+        return _anio;
     }
 
     public double GetCapacidadCarga()
     {
-        return capacidadCarga;
+        return _capacidadCarga;
     }
 
     public Sucursal GetSucursal()
     {
-        return sucursal;
+        return _sucursal;
     }
 
     public VehiculoTipo GetTipo()
     {
-        return tipo;
+        return _tipo;
     }
 
     public abstract double CalcularConsumo(double kilometros);
 
     public bool EsDe(VehiculoTipo tipo)
     {
-        return this.tipo == tipo;
+        return this._tipo == tipo;
     }
 
     public override string ToString()
     {
-        return $"{marca} {modelo}";
+        return $"{_marca} {_modelo}";
     }
 }

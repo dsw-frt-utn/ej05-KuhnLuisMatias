@@ -6,36 +6,36 @@ namespace Dsw2026Ej5.Domain;
 
 public class Sucursal
 {
-    private string codigo;
-    private string direccion;
-    private string ciudad;
-    private Responsable responsable;
+    private string _codigo;
+    private string _direccion;
+    private string _ciudad;
+    private Responsable _responsable;
 
     public Sucursal(string codigo, string direccion, string ciudad, Responsable responsable)
     {
-        this.codigo = codigo;
-        this.direccion = direccion;
-        this.ciudad = ciudad;
-        this.responsable = responsable;
+        _codigo = codigo;
+        _direccion = direccion;
+        _ciudad = ciudad;
+        _responsable = responsable;
     }
 
     public string GetCodigo()
     {
-        return codigo;
+        return _codigo;
     }
 
     public string GetDireccion()
     {
-        return direccion;
+        return _direccion;
     }
 
     public string GetCiudad()
     {
-        return ciudad;
+        return _ciudad;
     }
 
     public Responsable GetResponsable()
     {
-        return responsable;
+        return _responsable;
     }
 }
