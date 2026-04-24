@@ -7,72 +7,72 @@ namespace Dsw2026Ej5.Views;
 
 public class VehiculoViewModel
 {
-    private string patente = string.Empty;
-    private string? vehiculo;
-    private string? tipo;
-    private string? sucursal;
-    private double capacidadCarga;
-    private double kmPorLitro;
-    private int anio;
-    private double litrosExtra;
-    private double kmARecorrer;
+    private string _patente = string.Empty;
+    private string? _vehiculo;
+    private string? _tipo;
+    private string? _sucursal;
+    private double _capacidadCarga;
+    private double _kmPorLitro;
+    private int _anio;
+    private double _litrosExtra;
+    private double _kmARecorrer;
 
     public VehiculoViewModel(Vehiculo vehiculo)
     {
         if (vehiculo == null) return;
-        this.patente = vehiculo.GetPatente();
-        this.vehiculo = vehiculo.ToString();
-        this.tipo = vehiculo.GetTipo().ToString();
-        this.sucursal = vehiculo.GetSucursal().GetCodigo();
-        this.capacidadCarga = vehiculo.GetCapacidadCarga();
-        this.anio = vehiculo.GetAnio();
-        this.kmPorLitro = vehiculo is VehiculoCombustible combustible ? combustible.GetKilometrosPorLitro() : 0;
-        this.litrosExtra = vehiculo is VehiculoCombustible combustible1 ? combustible1.GetLitrosExtra() : 0;
-        this.kmARecorrer = 100;
+        _patente = vehiculo.GetPatente();
+        _vehiculo = vehiculo.ToString();
+        _tipo = vehiculo.GetTipo().ToString();
+        _sucursal = vehiculo.GetSucursal().GetCodigo();
+        _capacidadCarga = vehiculo.GetCapacidadCarga();
+        _anio = vehiculo.GetAnio();
+        _kmPorLitro = vehiculo is VehiculoCombustible combustible ? combustible.GetKilometrosPorLitro() : 0;
+        _litrosExtra = vehiculo is VehiculoCombustible combustible1 ? combustible1.GetLitrosExtra() : 0;
+        _kmARecorrer = 100;
     }
 
     public string GetPatente()
     {
-        return patente;
+        return _patente;
     }
 
     public string? GetVehiculo()
     {
-        return vehiculo;
+        return _vehiculo;
     }
 
     public string? GetTipo()
     {
-        return tipo;
+        return _tipo;
     }
 
     public string? GetSucursal()
     {
-        return sucursal;
+        return _sucursal;
     }
 
     public double GetCapacidadCarga()
     {
-        return capacidadCarga;
+        return _capacidadCarga;
     }
 
     public double GetKmPorLitro()
     {
-        return kmPorLitro;
+        return _kmPorLitro;
     }
 
     public int GetAnio()
     {
-        return anio;
+        return _anio;
     }
 
     public double GetLitrosExtra()
     {
-        return litrosExtra;
+        return _litrosExtra;
     }
 
     public double GetKmARecorrer()
     {
-        return kmARecorrer;
+        return _kmARecorrer;
     }
 }

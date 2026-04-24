@@ -6,29 +6,29 @@ namespace Dsw2026Ej5.Domain;
 
 public class Responsable
 {
-    private string nombre;
-    private string documento;
-    private string telefono;
+    private string _nombre;
+    private string _documento;
+    private string _telefono;
 
     public Responsable(string nombre, string documento, string telefono)
     {
-        this.nombre = nombre;
-        this.documento = documento;
-        this.telefono = telefono;
+        _nombre = nombre;
+        _documento = documento;
+        _telefono = telefono;
     }
 
     public string GetNombre()
     {
-        return nombre;
+        return _nombre;
     }
 
     public string GetDocumento()
     {
-        return documento;
+        return _documento;
     }
 
     public string GetTelefono()
     {
-        return telefono;
+        return _telefono;
     }
 }
